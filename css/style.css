@@ -98,8 +98,8 @@ body.dark .note {
 /* Butonul dark mode */
 #dark-toggle {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    top: 50%;
+    left: 20px;
     z-index: 9999;
     background: #2d4057;
     color: white;
