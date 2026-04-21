@@ -40,6 +40,83 @@ navbar a:hover {
     text-decoration: underline 1px;
 }
 
+/* ===== DARK MODE ===== */
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+body.dark header {
+    background: #0f0f1a;
+}
+
+body.dark footer {
+    background: #0f0f1a;
+}
+
+body.dark .table-wrapper {
+    background: #1e2a3a;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+body.dark .table-wrapper h2 {
+    background-color: #0f1e2e !important;
+}
+
+body.dark .info-table thead tr {
+    background-color: #1a2535 !important;
+}
+
+body.dark .info-table th {
+    color: #90b4d4 !important;
+    background-color: #1a2535 !important;
+    border-bottom: 2px solid #2d4057 !important;
+}
+
+body.dark .info-table td {
+    color: #d0d0d0 !important;
+    border-bottom: 1px solid #2a3a4a !important;
+}
+
+body.dark .info-table tr:hover td {
+    background-color: #1e3048 !important;
+}
+
+body.dark .info-table td:first-child {
+    color: #90b4d4 !important;
+}
+
+body.dark .note {
+    color: #8899aa !important;
+}
+
+/* Butonul dark mode */
+#dark-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background: #2d4057;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: background 0.3s ease;
+}
+
+#dark-toggle:hover {
+    background: #1a2535;
+}
+
 /* ===== TABEL ===== */
 
 .table-section {
