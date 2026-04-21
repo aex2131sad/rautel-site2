@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-   <meta name="viewport" content="width-device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
@@ -12,38 +12,81 @@
    <title>Răuțel - Localitatea mea</title>
 </head>
 <body>
-
     <header>
         <img class="logo" src="images/favicon2.png">
         <navbar>
-<a href="index.html">Acasă</a>
-<a href="pages/despre.html">Despre</a>
-<a href="pages/exploreaza.html">Explorează</a>
-<a href="pages/contacte.html">Contacte</a>
-<a href="pages/parteneri.html">Parteneri</a>
+            <a href="index.html">Acasă</a>
+            <a href="pages/despre.html">Despre</a>
+            <a href="pages/exploreaza.html">Explorează</a>
+            <a href="pages/contacte.html">Contacte</a>
+            <a href="pages/parteneri.html">Parteneri</a>
         </navbar>
         <i id="hamburger" onclick="mobileMenu()" class="fa-solid fa-bars"></i>
     </header>
-
     <main>
         <section id="index">
 
+            <!-- SLIDER -->
+            <div class="slider">
+                <div class="slider-track">
+                    <img src="images/slide1.jpg" class="slide" alt="Răuțel 1">
+                    <img src="images/slide2.jpg" class="slide" alt="Răuțel 2">
+                    <img src="images/slide3.jpg" class="slide" alt="Răuțel 3">
+                </div>
+                <button class="slider-btn left" onclick="changeSlide(-1)">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn right" onclick="changeSlide(1)">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <div class="slider-dots" id="slider-dots"></div>
+            </div>
+
             <div class="index-info">
                 <h1>Răuțel - satul meu</h1>
-
                 <br/>
-
                 <a href="pages/despre.html" class="link-index">Află mai mult</a>
             </div>
-            
+
         </section>
-
-
     </main>
-
     <footer>
         <span>Școlnic Alexandru © 2026</span>
     </footer>
-<button id="dark-toggle" onclick="toggleDark()">🌙</button>
+    <button id="dark-toggle" onclick="toggleDark()">🌙</button>
+
+    <script>
+        let current = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dotsContainer = document.getElementById('slider-dots');
+
+        // Creează dots
+        slides.forEach((_, i) => {
+            const dot = document.createElement('span');
+            dot.className = 'dot' + (i === 0 ? ' active' : '');
+            dot.onclick = () => goToSlide(i);
+            dotsContainer.appendChild(dot);
+        });
+
+        function updateSlider() {
+            document.querySelector('.slider-track').style.transform = `translateX(-${current * 100}%)`;
+            document.querySelectorAll('.dot').forEach((d, i) => {
+                d.classList.toggle('active', i === current);
+            });
+        }
+
+        function changeSlide(dir) {
+            current = (current + dir + slides.length) % slides.length;
+            updateSlider();
+        }
+
+        function goToSlide(i) {
+            current = i;
+            updateSlider();
+        }
+
+        // Auto-play la fiecare 4 secunde
+        setInterval(() => changeSlide(1), 4000);
+    </script>
 </body>
 </html>
