@@ -2,40 +2,139 @@
 <html>
 <head>
     <meta charset="UTF-8">
-   <meta name="viewport" content="width-device-width, initial-scale=1.0">
-   
-   <link rel="stylesheet" href="../css/style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
-   <link rel="icon" href="../images/favicon.png">
-   <script src="../js/script.js"></script>
-   
-   <title>Răuțel - Localitatea mea</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="icon" href="../images/favicon.png">
+    <script src="../js/script.js"></script>
+    <title>Răuțel - Curiozități</title>
 </head>
 <body>
 
     <header>
         <img class="logo" src="../images/favicon2.png">
         <navbar>
-<a href="../index.html">Acasă</a>
-<a href="despre.html">Despre</a>
-<a href="exploreaza.html">Explorează</a>
-<a href="contacte.html">Contacte</a>
-<a href="parteneri.html">Parteneri</a>
+            <a href="../index.html">Acasă</a>
+            <a href="despre.html">Despre</a>
+            <a href="exploreaza.html">Explorează</a>
+            <a href="contacte.html">Contacte</a>
+            <a href="parteneri.html">Parteneri</a>
         </navbar>
+        <i id="hamburger" onclick="mobileMenu()" class="fa-solid fa-bars"></i>
     </header>
 
     <main>
-
         <section>
             <h1 class="centered">Curiozități</h1>
-        </section>
 
-<a href="https://www.facebook.com/places/Things-to-do-in-Rautel-Balti-Moldova/108573379165727/" class="centered">Pagina facebook</a>
+            <!-- Imnul Moldovei -->
+            <h2>Limba noastră</h2>
+            <p>
+              Limba noastră-i o comoară
+în adîncuri înfundată
+Un șirag de piatră rară
+pe moșie revărsată.
+<br>
+Limba noastră-i foc ce arde
+într-un neam, ce fără veste
+S-a trezit din somn de moarte
+ca viteazul din poveste.
+<br>
+Limba noastră-i numai cîntec
+doina dorurilor noastre
+Roi de fulgere, ce spintec
+noruri negri, zări albastre.
+<br>
+Limba noastră-i graiul pîinii
+cînd de vînt se mișcă vara
+In rostirea ei bătrînii
+cu sudori sfințit-au țara.
+<br>
+Limba noastră-i frunză verde
+zbuciumul din codrii veșnici
+Nistrul lin, ce-n valuri pierde
+ai luceferilor sfeșnici.
+<br>
+Limba noastră-i vechi izvoade
+povestiri din alte vremuri
+Și citindu-le ’nșirate
+te-nfiori adînc și tremuri.
+<br>
+Limba noastră îi aleasă
+să ridice slava-n ceruri
+Să ne spiue-n hram și-acasă
+veșnicele adevăruri.
+<br>
+Limba noastră-i limbă sfîntă
+limba vechilor cazanii
+Care-o plîng și care-o cîntă
+pe la vatra lor țăranii.
+<br>
+Înviați-vă dar graiul
+ruginit de multă vreme
+Ștergeți slinul, mucegaiul
+al uitării ’n care geme.
+<br>
+Strîngeți piatra lucitoare
+ce din soare se aprinde
+Și-ți avea în revărsare
+un potop nou de cuvinte.
+<br>
+Nu veți plînge-atunci amarnic
+că vi-i limba prea săracă
+Și-ți vedea, cît îi de darnic
+graiul țării noastre dragă.
+<br>
+Răsări-va o comoară
+în adîncuri înfundată
+Un șirag de piatră rară
+pe moșie revărsată.
+            </p>
+
+            <a href="https://ro.wikipedia.org/wiki/Limba_noastr%C4%83_(imn)" 
+               target="_blank" class="link-index">
+                Află mai multe despre imn →
+            </a>
+
+            <hr style="margin: 40px 0; border-color: #f3deca;">
+
+            <!-- Audio -->
+            <h2>Ascultă imnul</h2>
+            <p>Mai jos poți asculta imnul Republicii Moldova:</p>
+
+            <audio controls style="width: 100%; margin-bottom: 30px;">
+                <source src="../audio/imn.mp3" type="audio/mpeg">
+                Browserul tău nu suportă elementul audio.
+            </audio>
+
+            <hr style="margin: 40px 0; border-color: #f3deca;">
+
+            <!-- Video -->
+            <h2>Vizionează</h2>
+            <p>
+                Interpretare oficială a imnului național, prezentată la ceremonii de stat:
+            </p>
+
+            <video controls class="vframe" poster="../images/imn-poster.jpg">
+                <source src="../video/imn.mp4" type="video/mp4">
+                Browserul tău nu suportă elementul video.
+            </video>
+
+            <br/><br/>
+
+            <a href="https://www.facebook.com/places/Things-to-do-in-Rautel-Balti-Moldova/108573379165727/" 
+               target="_blank" class="link-index">
+                Pagina Facebook a localității →
+            </a>
+
+        </section>
     </main>
 
     <footer>
         <span>Școlnic Alexandru © 2026</span>
     </footer>
- <button id="dark-toggle" onclick="toggleDark()">🌙</button>
+
+    <button id="dark-toggle" onclick="toggleDark()">🌙</button>
+
 </body>
 </html>
