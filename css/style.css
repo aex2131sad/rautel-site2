@@ -186,6 +186,16 @@ body.dark .note {
     background: #1a2535;
 }
 
+.yt-frame {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: 3px solid #fa9483;
+    border-radius: 5px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    display: block;
+}
+
+
 /* ===== TABEL ===== */
 
 .table-section {
